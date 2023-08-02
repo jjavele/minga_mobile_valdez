@@ -3,6 +3,7 @@ import 'react-native-gesture-handler';
 import Home from './src/views/Home'
 import { NavigationContainer } from '@react-navigation/native'
 import DrawerNavigator from './src/navigators/drawerNavigator';
+import { FlashMessage } from 'react-native-flash-message';
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
       {/*<StackNavigator />*/}
       <DrawerNavigator />
     </NavigationContainer>
+    
     
   );
 }
