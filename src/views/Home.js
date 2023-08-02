@@ -6,7 +6,7 @@ import Logo from '../../assets/Logo.png'
 import Background from '../../assets/background-image.png'
 import 'react-native-gesture-handler';
 import { NavigatorContainer } from '@react-navigation/native'
-import Mangas from './Mangas';
+import Mangas from './MangasX';
 
 
 const Home = (props) => {

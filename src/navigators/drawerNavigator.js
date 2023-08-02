@@ -6,6 +6,7 @@ import SignUp from '../views/SignUp.js'
 import SignIn from '../views/SignIn.js'
 import Mangas from '../views/Mangas.js'
 import SignOut from '../views/SignOut.js';
+import MangaDetail from '../views/MangaDetail.js';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const getStoredUserInfo = async () => {
@@ -85,12 +86,15 @@ const Drawer = createDrawerNavigator()
 const DrawerNavigator = () => {
 
     return(
-      <Drawer.Navigator drawerContent={(props) => <CustomDrawerContent {...props} />}>
-        <Drawer.Screen name='Home' component={Home} options={{ headerShown: false }}/>
-        <Drawer.Screen name='Mangas' component={Mangas}/>
-        <Drawer.Screen name='Sign Up' component={SignUp}/>
-        <Drawer.Screen name='Sign In' component={SignIn}/>
-      </Drawer.Navigator>
+      <>
+        <Drawer.Navigator drawerContent={(props) => <CustomDrawerContent {...props} />}>
+          <Drawer.Screen name='Home' component={Home} options={{ headerShown: false }}/>
+          <Drawer.Screen name='Mangas' component={Mangas} options={{ headerShown: false }}/>
+          <Drawer.Screen name='Sign Up' component={SignUp}/>
+          <Drawer.Screen name='Sign In' component={SignIn}/>
+          <Drawer.Screen name='MangaDetail' component={MangaDetail}/>
+        </Drawer.Navigator>
+      </>
     )
 }
 

@@ -1,3 +1,6 @@
+import React from 'react';
+import { Provider } from 'react-redux';
+import {store} from './src/redux/store.js';
 import { StyleSheet, StatusBar } from 'react-native';
 import 'react-native-gesture-handler';
 import Home from './src/views/Home'
@@ -7,12 +10,12 @@ import { FlashMessage } from 'react-native-flash-message';
 
 export default function App() {
   return (
-    <NavigationContainer>
-      
-      <StatusBar hidden />
-      {/*<StackNavigator />*/}
-      <DrawerNavigator />
-    </NavigationContainer>
+    <Provider store={store}> 
+      <NavigationContainer>
+        <StatusBar hidden />
+        <DrawerNavigator />
+      </NavigationContainer>
+    </Provider>
     
     
   );
